@@ -1,0 +1,8 @@
+CREATE OR REPLACE FUNCTION media_peso
+  RETURN NUMBER
+  IS
+  i NUMBER;
+  BEGIN
+  SELECT Avg(peso) INTO i FROM producao;
+  RETURN i;
+END;
